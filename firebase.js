@@ -1,14 +1,12 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getDatabase } from "firebase/database";
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDT3eByam9dspnvMq3QLOKFbxi-jUtA8wY",
   authDomain: "animalshelter-7fd29.firebaseapp.com",
+  databaseURL: "https://animalshelter-7fd29-default-rtdb.europe-west1.firebasedatabase.app/",
   projectId: "animalshelter-7fd29",
   storageBucket: "animalshelter-7fd29.appspot.com",
   messagingSenderId: "364004224362",
@@ -18,4 +16,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const db = getDatabase(app);  // Initialize the Realtime Database
+
+export { db };
