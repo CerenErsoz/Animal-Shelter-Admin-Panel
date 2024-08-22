@@ -1,12 +1,14 @@
-
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   animals: [],
 };
 
-export const {reducer, actions} = createSlice({
+const animalsSlice = createSlice({
   name: 'animals',
   initialState,
   reducers: {},
 });
+
+export const { actions } = animalsSlice; 
+export default animalsSlice.reducer; 

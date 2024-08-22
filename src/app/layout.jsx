@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  console.log(store);//store configuration denemek için 
+  //console.log(store);//store configuration denemek için 
   /** {
   dispatch: [Function (anonymous)],
   subscribe: [Function: subscribe],

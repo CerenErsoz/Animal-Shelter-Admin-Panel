@@ -1,10 +1,8 @@
-//app in içerisinde birden fazla store olursa burada yönetmek bağlamak işlemler yapmak için buna ihtiyaç duyuluyor.
-
 import { configureStore } from '@reduxjs/toolkit';
-import animalsReducer from './slices/animalsSlice';
+import animalsReducer from './slices/animalsSlice'; // Varsayılan olarak export edilen reducer'ı import edin
 
 export const store = configureStore({
   reducer: {
-    animals: animalsReducer,
+    animals: animalsReducer, // Burada varsayılan olarak import edilen reducer'ı kullanıyoruz
   },
 });
