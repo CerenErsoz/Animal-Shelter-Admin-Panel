@@ -1,0 +1,57 @@
+body {
+    background-image: url('../assest/bg.jpg');
+    background-size: cover;
+  background-position: center;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.85); /* Saydam beyaz arka plan */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Daha belirgin bir gölge */
+  border-radius: 15px; /* Daha yuvarlak köşeler */
+  padding: 50px;
+  text-align: center;
+  max-width: 400px; /* Beyaz kutuyu daraltıyoruz */
+  width: 100%;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.btn-primary {
+  padding: 15px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color:cadetblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Hover ile butonun biraz büyümesi */
+}
+
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
