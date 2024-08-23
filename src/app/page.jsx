@@ -7,7 +7,6 @@ export default function Home() {
       <Header /> {/* Include the Header */}
       <div className="container">
         <h1>Admin Panel</h1>
-        
         <div className="button-group">
           <Link href="/animal/add">
             <button className="btn-primary">Add Animal</button>
@@ -15,10 +14,6 @@ export default function Home() {
           
           <Link href="/animal/list">
             <button className="btn-primary">List Animals</button>
-          </Link>
-          
-          <Link href="/animal/manage-status">
-            <button className="btn-primary">Manage Animal Status</button>
           </Link>
         </div>
       </div>

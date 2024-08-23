@@ -1,6 +1,8 @@
-import { Inter } from "next/font/google";
-import { store } from "../store/storeIndex";
+
 import "../styles/global.css";
+import { Inter } from "next/font/google";
+import ReactReduxProvider from "../providers/ReactReduxProvider";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,17 +12,15 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  //console.log(store);//store configuration denemek için 
-  /** {
-  dispatch: [Function (anonymous)],
-  subscribe: [Function: subscribe],
-  getState: [Function: getState],
-  replaceReducer: [Function: replaceReducer],
-  '@@observable': [Function: observable]
-}*/
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={inter.className}>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <body className="w-full">
+        <ReactReduxProvider>{children}</ReactReduxProvider>
+      </body>
     </html>
   );
 }
+

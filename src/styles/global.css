@@ -118,3 +118,92 @@ h1 {
   background-color: #00b395;
   transform: scale(1.05);
 }
+
+.table-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.animal-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.animal-table th,
+.animal-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.animal-table th {
+  background-color: cadetblue;
+  color: white;
+}
+
+.animal-table td {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.animal-picture {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.animal-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.animal-table tr:hover {
+  background-color: #ddd;
+}
+
+.animal-table th {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: cadetblue;
+  color: white;
+}
+
+
+.manage-status-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.manage-status-container h2 {
+  color: #444;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.manage-status-container label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.manage-status-container select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.manage-status-container select:focus {
+  border-color: cadetblue;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
