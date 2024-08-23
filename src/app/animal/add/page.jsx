@@ -1,7 +1,10 @@
 'use client'
+
 import React, { useState } from 'react';
 import { ref, set } from 'firebase/database';
 import { db } from '../../../../firebase';
+import '../../../styles/global.css';
+import Header from '../../../components/header/header'
 
 const AddAnimal = () => {
   const [animalData, setAnimalData] = useState({
@@ -18,14 +21,11 @@ const AddAnimal = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const animalRef = ref(db, 'animal/' + animalData.name); // Hayvan adı, benzersiz anahtar olarak kullanılıyor
-  
-    console.log("Gönderilen veri:", animalData); // Gönderilen veriyi loglayın
+    const animalRef = ref(db, 'animal/' + animalData.name); 
   
     set(animalRef, animalData)
       .then(() => {
         alert('Hayvan başarıyla eklendi!');
-        console.log("Veri Firebase'e başarıyla eklendi");
         setAnimalData({
           picture: '',
           species: '',
@@ -38,10 +38,11 @@ const AddAnimal = () => {
         console.error('Hayvan eklenirken hata oluştu: ', error);
       });
   };
-  
 
   return (
     <div>
+      <Header /> 
+      <div className="add-animal-container">
       <h2>Add Animal</h2>
       <form onSubmit={handleSubmit}>
         <div>
@@ -71,6 +72,11 @@ const AddAnimal = () => {
         <button type="submit">Add Animal</button>
       </form>
     </div>
+
+    </div>
+
+
+    
   );
 };
 

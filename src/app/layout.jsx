@@ -5,7 +5,7 @@ import "../styles/global.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Animal Shelter Admin Panel",
+  title: "Animal Shelter",
   description: "Animal Shelter Admin Panel",
 };
 
