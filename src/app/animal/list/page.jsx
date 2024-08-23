@@ -63,7 +63,7 @@ const AnimalList = () => {
                   <td>{animal.status}</td>
                   <td>
                     <button onClick={() => handleManageStatus(animal)} className="btn-primary">
-                      Manage Status
+                      Manage Ownership Status
                     </button>
                   </td>
                 </tr>
