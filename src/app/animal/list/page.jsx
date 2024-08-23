@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useEffect } from 'react';
@@ -21,7 +20,7 @@ const AnimalList = () => {
       const data = snapshot.val();
       if (data) {
         const animalArray = Object.keys(data).map((key) => ({
-          id: key,
+          id: key, // Benzersiz ID
           ...data[key],
         }));
         dispatch(setAnimals(animalArray));

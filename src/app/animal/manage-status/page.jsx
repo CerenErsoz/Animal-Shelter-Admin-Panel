@@ -1,5 +1,4 @@
-
-'use client'
+'use client';
 
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
@@ -16,7 +15,7 @@ const ManageStatus = () => {
   const handleChangeStatus = (e) => {
     const newStatus = e.target.value;
     if (selectedAnimal) {
-      const animalRef = ref(db, `animal/${selectedAnimal.id}`);
+      const animalRef = ref(db, `animal/${selectedAnimal.id}`); // Benzersiz ID'yi kullanarak referans oluştur
       update(animalRef, { status: newStatus })
         .then(() => {
           dispatch(updateAnimalStatus({ id: selectedAnimal.id, status: newStatus }));
