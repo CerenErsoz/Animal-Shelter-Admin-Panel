@@ -7,12 +7,17 @@ import { ref, update } from 'firebase/database';
 import { db } from '../../../../firebase';
 import '../../../styles/global.css';
 import Header from '../../../components/header/header';
-import { useRouter } from 'next/navigation'; // Import useRouter
+import { useRouter } from 'next/navigation'; 
+import { useSearchParams } from 'next/navigation'; 
 
 const ManageStatus = () => {
   const dispatch = useDispatch();
-  const selectedAnimal = useSelector((state) => state.animals.selectedAnimal);
-  const router = useRouter(); // Initialize useRouter
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const animalName = searchParams.get('name'); // URL parametresinden hayvan adını al
+
+  const animals = useSelector((state) => state.animals.animals);
+  const selectedAnimal = animals.find(animal => animal.name === animalName); // URL parametresine göre hayvanı bul
 
   const handleChangeStatus = (e) => {
     const newStatus = e.target.value;
@@ -22,7 +27,7 @@ const ManageStatus = () => {
         .then(() => {
           dispatch(updateAnimalStatus({ id: selectedAnimal.id, status: newStatus }));
           alert('Hayvan durumu başarıyla güncellendi!');
-          router.push('/animal/list'); // Redirect to the animal list page
+          router.push('/animal/list'); 
         })
         .catch((error) => {
           console.error('Durum güncellenirken hata oluştu: ', error);

@@ -32,7 +32,7 @@ const AnimalList = () => {
 
   const handleManageStatus = (animal) => {
     dispatch(selectAnimal(animal));
-    router.push('/animal/manage-status');
+    router.push(`/animal/manage-status?name=${encodeURIComponent(animal.name)}`);
   };
 
   return (
