@@ -70,6 +70,5 @@ Once the server is running, you can access the application in your browser at `h
 
 ## Video Demo
 
-Here is a video walkthrough of the application:
+Here is a video walkthrough of the application: [Watch the video](https://youtu.be/atdzpqrevyI)
 
-![Watch the video](https://youtu.be/atdzpqrevyI)
