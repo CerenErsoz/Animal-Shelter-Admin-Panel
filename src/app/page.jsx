@@ -1,23 +1,14 @@
-import Link from 'next/link';
-import Header from '../components/header/header';
+"use client";
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';  // next/router yerine next/navigation kullan
 
 export default function Home() {
-  return (
-    <div>
-      <Header /> {/* Include the Header */}
-      <div className="container">
-        <h1>Admin Panel</h1>
-        <div className="button-group">
-          <Link href="/animal/add">
-            <button className="btn-primary">Add Animal</button>
-          </Link>
-          
-          <Link href="/animal/list">
-            <button className="btn-primary">List Animals</button>
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
+  const router = useRouter();
 
+  useEffect(() => {
+    router.push('/auth/login'); // Giriş sayfasına yönlendir
+  }, []);
+
+  return <div>Redirecting to login...</div>;
+}

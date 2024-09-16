@@ -212,3 +212,84 @@ h1 {
   border: 1px solid #ddd;
   border-radius: 4px;
 }
+
+
+/* Login ve Register sayfaları için özel container */
+.auth-container {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.auth-container h2 {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth-form label {
+  font-weight: bold;
+  color: #666;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.auth-form input[type="email"],
+.auth-form input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.auth-form input:focus {
+  border-color: cadetblue;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  opacity: 1;
+}
+
+.auth-form button {
+  padding: 12px;
+  background-color: cadetblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.auth-form button:hover {
+  background-color: #00b395;
+  transform: scale(1.05);
+}
+
+.auth-footer {
+  margin-top: 20px;
+}
+
+.auth-footer p {
+  color: #666;
+}
+
+.auth-footer a {
+  color: cadetblue;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
