@@ -15,20 +15,20 @@ const Register = () => {
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        console.log('Kullanıcı kaydedildi:', userCredential.user);
+        console.log('User registered:', userCredential.user);
         router.push('/auth/login');
       })
       .catch((error) => {
-        console.error('Hata:', error.code, error.message);
+        console.error('Error:', error.code, error.message);
       });
   };
 
   return (
     <div className="auth-container">
-      <h2>Kayıt Ol</h2>
+      <h2>Register</h2>
       <form className="auth-form" onSubmit={handleSubmit}>
         <div>
-          <label>Email:</label>
+          <label>Email address:</label>
           <input 
             type="email" 
             value={email} 
@@ -37,7 +37,7 @@ const Register = () => {
           />
         </div>
         <div>
-          <label>Şifre:</label>
+          <label>Password:</label>
           <input 
             type="password" 
             value={password} 
@@ -45,7 +45,7 @@ const Register = () => {
             required 
           />
         </div>
-        <button type="submit">Kayıt Ol</button>
+        <button type="submit">Register</button>
       </form>
     </div>
   );
